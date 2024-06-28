@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #eff3ff;
+    overflow-x: hidden;
+}
+
+nav {
+    position: fixed;
+    isolation: isolate;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    z-index: 9;
+}
+
+.nav__header {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ff014f;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.nav__logo img {
+    display: flex;
+    max-width: 40px;
+    border-radius: 100%;
+}
+
+.nav__menu__btn {
+    font-size: 1.5rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.nav__links {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #ff014f;
+    transition: 0.5s;
+    z-index: -1;
+    transform: translateY(-100%);
+}
+
+.nav__links.open {
+    transform: translateY(0);
+}
+
+.nav__links a {
+    font-weight: 500;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.nav__links a:hover {
+    color: #222222;
+}
+
+@media (width > 768px) {
+    nav {
+        position: static;
+        padding: 2rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .nav__header {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .nav__logo img {
+        max-width: 60px;
+    }
+
+    .nav__menu__btn {
+        display: none;
+    }
+
+    .nav__links {
+        position: static;
+        padding: 0;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 3rem;
+        background-color: transparent;
+        transform: none;
+    }
+
+    .nav__links a {
+        color: #222222;
+    }
+
+    .nav__links a:hover {
+        color: #ff014f;
+    }
+
+    .hire__me {
+        padding: 1rem 1.5rem;
+        border-radius: 5px;
+        box-shadow: 10px 10px 15px #d7dbe6, -10px -10px 15px #ffffff;
+    }
+
+    .hire__me:hover {
+        color: #ffffff !important;
+        background-color: #ff014f;
+    }
+}
