@@ -6,6 +6,8 @@ import './index.css';
 import { BrowserRouter, Router } from "react-router-dom";
 import Hero from "./components/sections/Hero";
 import Skills from "./components/sections/Skills";
+import Education from "./components/sections/Education";
+import Project from "./components/sections/Project";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -23,6 +25,8 @@ function App() {
       <Body>
         <Hero />
         <Skills />
+        <Education />
+        <Project />
       </Body>
     </BrowserRouter>
   </ThemeProvider>
