@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div className="nav" style={{ backgroundColor: theme.bg }}>
       <div className="navbar-container">
-        <LinkR className="nav-logo" to="/">GeeksForGeeks</LinkR>
+        <LinkR className="nav-logo" to="/">Anshul Kansal</LinkR>
 
         <div className="mobile-icon" onClick={() => setIsOpen(!isOpen)}>
           <MenuRounded style={{ color: "inherit" }} />
@@ -33,13 +33,10 @@ const Navbar = () => {
             <a className="nav-link" onClick={() => setIsOpen(!isOpen)} href="#Experience">Experience</a>
             <a className="nav-link" onClick={() => setIsOpen(!isOpen)} href="#Projects">Projects</a>
             <a className="nav-link" onClick={() => setIsOpen(!isOpen)} href="#Education">Education</a>
-            <a className="github-button" href={Bio.github} target="_blank" style={{ background: theme.primary, color: theme.text_primary }}>Github Profile</a>
+            <a className="github-button" href={Bio.github} target="_blank" rel="noreferrer" style={{ background: theme.primary, color: theme.text_primary }}>Github Profile</a>
           </ul>
         )}
 
-        <div className="button-container">
-          <a className="github-button" href={Bio.github} target="_blank">Github Profile</a>
-        </div>
       </div>
     </div>
   );

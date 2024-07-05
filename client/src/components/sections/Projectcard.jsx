@@ -14,10 +14,10 @@ const ProjectCard = ({ title, description, imgUrl,github,live}) => {
                     <h4>{title}</h4>
                     <span>{description}</span>
                     <div className="proj-buttons">
-                        <a href={github} className="proj-icon" title="GitHub" target="_blank">
+                        <a href={github} className="proj-icon" title="GitHub" target="_blank" rel="noreferrer">
                             <GitHubIcon />
                         </a>
-                        <a href={live} className="proj-icon" title="Live Demo" target="_blank">
+                        <a href={live} className="proj-icon" title="Live Demo" target="_blank" rel="noreferrer">
                             <LaunchIcon />
                         </a>
                     </div>

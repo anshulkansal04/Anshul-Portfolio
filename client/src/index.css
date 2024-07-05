@@ -42,9 +42,11 @@ body {
   background: #626970;
 }
 
-/* ::-webkit-backdrop-filter {
-  blur: 3px saturate(106%);
-} */
+.nav {
+  -webkit-backdrop-filter: blur(3px) saturate(106%);
+  backdrop-filter: blur(3px) saturate(106%);
+}
+
 .nav {
   background-color: #090917;
   height: 80px;
@@ -97,35 +99,6 @@ body {
 
 .nav-link:hover {
   color: #854CE6;
-}
-
-.button-container {
-  width: 80%;
-  height: 100%;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  padding: 0 6px;
-}
-
-.github-button {
-  border: 1px solid #854CE6;
-  color: #854CE6;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  border-radius: 20px;
-  cursor: pointer;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: 500;
-  transition: all 0.6s ease-in-out;
-  text-decoration: none;
-}
-
-.github-button:hover {
-  background: #854CE6;
-  color: #F2F3F4;
 }
 
 .mobile-icon {
@@ -251,7 +224,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
 }
 
@@ -329,7 +302,7 @@ body {
   -moz-appearance: button;
   appearance: button;
   text-decoration: none;
-  width: 95%;
+  width: 40%;
   max-width: 300px;
   text-align: center;
   padding: 16px 0;
@@ -346,6 +319,49 @@ body {
   transition: all 0.4s ease-in-out;
   box-shadow: 20px 20px 60px #1f2634;
   filter: brightness(1);
+  z-index: 50;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.hero-icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  margin: 8px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 100;
+}
+
+.github:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.insta:hover {
+  background: linear-gradient(45deg, #833AB4, #C13584, #E1306C, #FD1D1D, #FDCB5C);
+  color: #fff;
+}
+
+.linkedin:hover {
+  background-color: #0077B5;
+  color: #fff;
+}
+
+.mail:hover {
+  background: black;
+  color: #fff;
 }
 
 @media (max-width: 640px) {

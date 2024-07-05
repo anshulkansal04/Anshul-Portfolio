@@ -7,7 +7,7 @@ import projImg4 from "../../images/P4.png";
 import projImg5 from "../../images/P5.png";
 import projImg6 from "../../images/P6.png";
 import colorSharp2 from "../../images/color-sharp2.png";
-import TrackVisibility from 'react-on-screen';
+// import TrackVisibility from 'react-on-screen';
 import StarCanvas from '../canvas/Stars';
 
 const Project = () => {
