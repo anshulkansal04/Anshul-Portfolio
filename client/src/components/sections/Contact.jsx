@@ -55,7 +55,7 @@ const Contact = () => {
     };
 
     return (
-        <div ref={ref} className="contact-container">
+        <div ref={ref} className="contact-container" id="Contact">
             <motion.div
                 variants={slideIn('left', "tween", 0.2, 1)}
                 initial="hidden"

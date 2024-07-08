@@ -25,10 +25,9 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate a data fetch with a timeout
     setTimeout(() => {
       setLoading(false);
-    }, 3000); // Adjust the timeout as needed
+    }, 3000);
   }, []);
 
   if (loading) {
@@ -44,9 +43,9 @@ function App() {
           <div>
             <Hero />
             <Skills />
-            <Education />
-            <Project />
             <Experience />
+            <Project />
+            <Education />
             <Contact />
           </div>
         </Body>

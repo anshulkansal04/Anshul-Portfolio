@@ -364,10 +364,11 @@ body {
   color: #fff;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 960px) {
   .hero-resume-button {
-    padding: 12px 0;
-    font-size: 18px;
+    width: 50%;
+    padding: 12px 12px;
+    font-size: 14px;
   }
 }
 
@@ -466,9 +467,14 @@ body {
   position: relative;
   z-index: 1;
   background: rgba(0, 0, 0, 0.5);
-  /* background: rgba(9,9,23,0.5); */
   border-radius: 10px;
+  @media (max-width: 768px) {
+    margin-bottom: 25px;
+    
+  }
 }
+
+
 
 .skill-card {
   background: #1e0039;

@@ -24,6 +24,7 @@ const Navbar = () => {
           <a className="nav-link" href="#Experience">Experience</a>
           <a className="nav-link" href="#Projects">Projects</a>
           <a className="nav-link" href="#Education">Education</a>
+          <a className="nav-link" href="#Contact">Contact Me</a>
         </ul>
 
         {isOpen && (

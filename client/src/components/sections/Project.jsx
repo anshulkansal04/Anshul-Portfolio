@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectCard from './Projectcard';
-import projImg1 from "../../images/P2.png";
+import projImg1 from "../../images/P1.png";
 import projImg2 from "../../images/P2.png";
 import projImg3 from "../../images/P3.png";
 import projImg4 from "../../images/P4.png";
@@ -16,7 +16,7 @@ const Project = () => {
             title: "Portfolio",
             description: "Full Stack Development",
             imgUrl: projImg1,
-            github: 'g',
+            github: '/',
             live:'/',
         },
         {
@@ -31,28 +31,28 @@ const Project = () => {
             description: "Full Stack Development",
             imgUrl: projImg3,
             github: 'https://github.com/anshulkansal04/LearnHub',
-            live:'',
+            live:'https://github.com/anshulkansal04/LearnHub',
         },
         {
             title: "Parent Me",
             description: "Full Stack Development",
             imgUrl: projImg4,
             github: 'https://github.com/anshulkansal04/ParentMe',
-            live:'',
+            live:'https://github.com/anshulkansal04/ParentMe',
         },
         {
             title: "Maze Quest",
             description: "C++ Development",
             imgUrl: projImg5,
             github: 'https://github.com/anshulkansal04/MazeQuest',
-            live:'',
+            live:'https://github.com/anshulkansal04/MazeQuest',
         },
         {
             title: "Student Management System ",
             description: "C++ Development",
             imgUrl: projImg6,
             github: 'https://github.com/anshulkansal04/Student-Management-System',
-            live:'',
+            live:'https://github.com/anshulkansal04/Student-Management-System',
         },
     ];
 
