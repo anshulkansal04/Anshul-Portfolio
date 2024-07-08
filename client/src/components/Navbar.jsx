@@ -33,8 +33,7 @@ const Navbar = () => {
             <a className="nav-link" onClick={() => setIsOpen(!isOpen)} href="#Experience">Experience</a>
             <a className="nav-link" onClick={() => setIsOpen(!isOpen)} href="#Projects">Projects</a>
             <a className="nav-link" onClick={() => setIsOpen(!isOpen)} href="#Education">Education</a>
-            <a className="github-button" href={Bio.github} target="_blank" rel="noreferrer" style={{ background: theme.primary, color: theme.text_primary }}>Github Profile</a>
-          </ul>
+            </ul>
         )}
 
       </div>
