@@ -8,7 +8,6 @@ import projImg5 from "../../images/P5.png";
 import projImg6 from "../../images/P6.png";
 import colorSharp2 from "../../images/color-sharp2.png";
 // import TrackVisibility from 'react-on-screen';
-import StarCanvas from '../canvas/Stars';
 
 const Project = () => {
 
@@ -58,16 +57,13 @@ const Project = () => {
     ];
 
     return (
-        <section className="project" id="projects">
-            <div className="hero-bg">
-                <StarCanvas />
-            </div>
+        <section className="project" id="Projects">
             <div className="container">
                 <div className="row">
                     <div className="col-12">
                         <div >
                             <h2>Projects</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <p>Transforming ideas into reality, one line of code at a time.</p>
                             <div className="row">
                                 {
                                     projects.map((project, index) => {

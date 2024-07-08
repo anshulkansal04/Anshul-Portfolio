@@ -8,6 +8,8 @@ import Hero from "./components/sections/Hero";
 import Skills from "./components/sections/Skills";
 import Education from "./components/sections/Education";
 import Project from "./components/sections/Project";
+import Experience from "./components/sections/Experience";
+import StarCanvas from "./components/canvas/Stars";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -23,10 +25,14 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Body>
-        <Hero />
-        <Skills />
-        <Education />
-        <Project />
+        <StarCanvas />
+        <div>
+          <Hero />
+          <Skills />
+          <Education />
+          <Project />
+          <Experience />
+        </div>
       </Body>
     </BrowserRouter>
   </ThemeProvider>

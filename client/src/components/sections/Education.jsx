@@ -3,7 +3,7 @@ import '../../index.css';
 import Jiit from '../../images/JIIT-Noida.png';
 import vivek from '../../images/the-vivekanand-school.png';
 import SchoolIcon from '@mui/icons-material/School';
-import StarCanvas from '../canvas/Stars';
+// import StarCanvas from '../canvas/Stars';
 
 const Education = () => {
     useEffect(() => {
@@ -27,10 +27,10 @@ const Education = () => {
     }, []);
 
     return (
-        <section id="education" className="edu-section">
-            <div className='hero-bg'>
+        <section id="Education" className="edu-section">
+            {/* <div className='hero-bg'>
                 <StarCanvas />
-            </div>
+            </div> */}
             <div className="edu-header">
                 <SchoolIcon className="edu-icon" />
                 <h1 className="edu-title">My Education</h1>

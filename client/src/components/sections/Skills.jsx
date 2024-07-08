@@ -1,16 +1,16 @@
 import React from 'react';
 import '../../index.css';
 import { skil } from "../../data/constants";
-import StarCanvas from "../canvas/Stars";
+// import StarCanvas from "../canvas/Stars";
 import { motion } from "framer-motion";
 
 
 const Skills = () => {
     return (
         <div className="Skills" id="Skills">
-            <div className="hero-bg">
+            {/* <div className="hero-bg">
                 <StarCanvas />
-            </div>
+            </div> */}
             <h1 className='skills-h1'>Skills</h1>
             <p className='desc'>Here are some of my skills on which I have been working on for the
                 past 2 years.</p>

@@ -24,26 +24,11 @@ export const skil = [
   { name: 'React.js', icon: 'https://cdn-icons-png.flaticon.com/512/1126/1126012.png'},
   { name: 'Node.js', 
     icon: 'https://img.icons8.com/color/48/nodejs.png'},
-    { name: 'Express', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968381.png'},
+    { name: 'Express', icon: 'https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png'},
     { name: 'MySQL', icon: 'https://img.icons8.com/color/48/mysql.png'},
     { name: 'PostgreSQL', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968342.png'},
     { name: 'C++', icon: 'https://img.icons8.com/fluency/48/null/c-plus-plus-logo.png' },
     { name: 'C', icon: 'https://img.icons8.com/color/48/null/c-programming.png' },
     { name: 'Python', icon: 'https://img.icons8.com/color/48/null/python--v1.png' },
   { name: 'Git', icon: 'https://img.icons8.com/color/48/git.png' }
-];
-
-export const experiences = [
-  {
-    id: 0,
-    img: "",
-    role: "Digital Head",
-    company: "CICEHub, JIIT",
-    date: "June 2024 - Present",
-    desc: "",
-    skills: [
-      "Designing",
-    ],
-    doc: "",
-  },
 ];
