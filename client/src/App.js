@@ -12,6 +12,7 @@ import Experience from "./components/sections/Experience";
 import StarCanvas from "./components/canvas/Stars";
 import Contact from "./components/sections/Contact";
 import Loader from "./Siteload";
+import { Analytics } from '@vercel/analytics/react';
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -39,6 +40,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Body>
+        <Analytics />
           <StarCanvas />
           <div>
             <Hero />
