@@ -1126,50 +1126,134 @@ body {
   }
 }
 
-.loader-body {
+/* Loader.css */
+.loader-container {
+  position: fixed;
+  inset: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
   background-color: #090917;
-  margin: 0;
+  color: #64ffda;
+  font-family: 'Courier New', Courier, monospace;
+  z-index: 50;
 }
 
-.site-loader {
+.loader-wrapper {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 128px;
+  height: 128px;
 }
 
-.gear {
-  width: 100%;
-  height: 100%;
-  animation: rotate 2s linear infinite;
-}
-
-.ak-text {
+.loader-initials {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  animation: fade-in 2s forwards 1s;
+  inset: 0;
 }
 
-@keyframes rotate {
-  0% {
-      transform: rotate(0deg);
+.letter-stroke {
+  stroke: var(--primary);
+  fill: none;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: draw 2s linear forwards;
+}
+
+.letter-a {
+  stroke-dasharray: 100;
+  animation: draw 2s ease-in-out forwards;
+  animation-delay: 0s;
+}
+
+.letter-k {
+  stroke-dasharray: 100;
+  animation: draw 2s ease-in-out 0.5s forwards;
+  animation-delay: 0s;
+}
+
+.terminal {
+  width: 320px;
+  height: 64px;
+  background-color: #112240;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  overflow: hidden;
+}
+
+.terminal-header {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: #ff5f56;
+}
+
+.yellow {
+  background-color: #ffbd2e;
+}
+
+.green {
+  background-color: #27c93f;
+}
+
+.terminal-content {
+  display: flex;
+  align-items: center;
+}
+
+.prompt {
+  color: #64ffda;
+}
+
+.typing-text {
+  margin-left: 0.5rem;
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 0;
   }
-  100% {
-      transform: rotate(360deg);
+  50% {
+    opacity: 1;
   }
 }
 
-@keyframes fade-in {
-  0% {
-      opacity: 0;
+@keyframes draw {
+  from {
+    stroke-dashoffset: 100;
   }
-  100% {
-      opacity: 1;
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }

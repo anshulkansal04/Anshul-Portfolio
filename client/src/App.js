@@ -13,6 +13,7 @@ import StarCanvas from "./components/canvas/Stars";
 import Contact from "./components/sections/Contact";
 import Loader from "./Siteload";
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -28,7 +29,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 2500);
   }, []);
 
   if (loading) {
@@ -40,7 +41,8 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Body>
-        <Analytics />
+          <Analytics />
+          <SpeedInsights/>
           <StarCanvas />
           <div>
             <Hero />
