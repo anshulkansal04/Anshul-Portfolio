@@ -418,12 +418,9 @@ body {
 /* Skills */
 .Skills {
   text-align: center;
-  /* background-color: #3b0066; */
   color: white;
-  padding: 20px;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
+  padding: 40px 20px;
   position: relative;
-  /* Ensure positioning context for z-index */
   z-index: 1;
 }
 
@@ -459,47 +456,71 @@ body {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 20px;
   justify-items: center;
-  border: 1px solid black;
   padding: 20px;
   position: relative;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  @media (max-width: 768px) {
-    margin-bottom: 25px;
-    
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15px;
+    gap: 15px;
   }
 }
 
-
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    padding: 10px;
+    gap: 10px;
+  }
+}
 
 .skill-card {
-  background: #1e0039;
-  padding: 10px;
-  border-radius: 10px;
+  background: rgba(30, 0, 57, 0.8);
+  padding: 15px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 150px;
+  box-shadow: 0 4px 15px rgba(31, 38, 135, 0.15);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 140px;
+  transition: all 0.2s ease;
 }
 
 .skill-card:hover {
-  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 15px rgba(134, 76, 230, 0.2);
+  border-color: rgba(134, 76, 230, 0.4);
+  transform: translateY(-3px);
 }
 
 .skill-icon {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 8px rgba(134, 76, 230, 0.3));
 }
 
 .skills-p {
   margin: 0;
-  font-size: 1em;
+  font-size: 1.1em;
+  font-weight: 500;
+  background: linear-gradient(90deg, #854CE6, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Education CSS */
