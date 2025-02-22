@@ -15,19 +15,34 @@ import StarCanvas from "../canvas/Stars";
 import { Bio } from "../../data/constants";
 import { GitHub as GitHubIcon, LinkedIn as LinkedInIcon, Instagram as InstagramIcon ,X as XIcon, Email as EmailIcon} from '@mui/icons-material';
 
-const textvar = {
-    initial:{
-      x: -500,
-      opactiy:0
+const slideIn = {
+  hidden: {
+    x: -100,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 1,
     },
-    animate:{
-      x:0,
-      opacity:1,
-      transition:{
-        duration:1,
-        staggerChildren:0.1,
-      },
+  },
+};
+
+const fadeIn = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
     },
+  },
 };
 
 const Hero = () => {
@@ -39,34 +54,20 @@ const Hero = () => {
           <HeroBgAnimation />
         </div>
 
-        <motion.div variants={textvar} initial="initial" animate="animate">
-          <motion.div variants={textvar} className="hero-inner-container">
-            <motion.div variants={textvar} className="hero-left-container">
-              <motion.div variants={textvar}>
-                <motion.div variants={textvar} className="hero-title">
-                  Hi, I am <br /> {Bio.name}
-                </motion.div>
-                <motion.div variants={textvar} className="hero-text-loop">
-                  I am a
-                  <motion.span variants={textvar} className="hero-span">
-                    <Typewriter
-                      options={{
-                        strings: Bio.roles,
-                        autoStart: true,
-                        loop: true,
-                      }}
-                    />
-                  </motion.span>
-                </motion.div>
-              </motion.div>
-
-              <motion.div variants={textvar}>
-                <div className="hero-subtitle">{Bio.description}</div>
-              </motion.div>
-        {/* <motion.div {...headContainerAnimation}>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            visible: {
+              transition: {
+                staggerChildren: 0.3,
+              },
+            },
+          }}
+        >
           <div className="hero-inner-container">
-            <div className="hero-left-container">
-              <motion.div {...headTextAnimation}>
+            <motion.div className="hero-left-container" variants={slideIn}>
+              <motion.div variants={fadeIn}>
                 <div className="hero-title">
                   Hi, I am <br /> {Bio.name}
                 </div>
@@ -78,15 +79,17 @@ const Hero = () => {
                         strings: Bio.roles,
                         autoStart: true,
                         loop: true,
+                        delay: 50,
+                        deleteSpeed: 30,
                       }}
                     />
                   </span>
                 </div>
               </motion.div>
 
-              <motion.div {...headContentAnimation}>
+              <motion.div variants={fadeIn}>
                 <div className="hero-subtitle">{Bio.description}</div>
-              </motion.div> */}
+              </motion.div>
 
               <div className="hero-buttons">
                 <a
@@ -140,14 +143,24 @@ const Hero = () => {
                 </a>
               </div>
             </motion.div>
-            <div className="hero-right-container">
-              <motion.div {...headContentAnimation}>
-                <Tilt>
-                  <img className="hero-img" src={HeroImg} alt="Anshul Kansal" />
-                </Tilt>
-              </motion.div>
-            </div>
-          </motion.div>
+
+            <motion.div 
+              className="hero-right-container"
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <Tilt
+                options={{
+                  max: 25,
+                  scale: 1.05,
+                  speed: 1000,
+                }}
+              >
+                <img className="hero-img" src={HeroImg} alt="Anshul Kansal" />
+              </Tilt>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </div>
