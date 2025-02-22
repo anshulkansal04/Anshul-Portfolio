@@ -46,7 +46,7 @@ const ExperienceCard = ({ experience }) => {
               <b>Skills</b>
               <div className="experience-card-item-wrapper">
                 {experience?.skills?.map((skill, index) => (
-                  <div key={index} className="experience-card-skill">• {skill}</div>
+                  <div key={index} className="experience-card-skill">{skill}</div>
                 ))}
               </div>
             </div>

@@ -922,6 +922,7 @@ body {
   position: relative;
   z-index: 1;
   align-items: center;
+  /* background: radial-gradient(circle at center, rgba(134, 76, 230, 0.05), transparent 70%); */
 }
 
 .experience-wrapper {
@@ -947,6 +948,10 @@ body {
   font-weight: 600;
   margin-top: 20px;
   color: var(--text-primary);
+  /* background: linear-gradient(90deg, #854CE6, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 8px rgba(134, 76, 230, 0.3)); */
 }
 
 @media (max-width: 768px) {
@@ -961,6 +966,8 @@ body {
   text-align: center;
   font-weight: 600;
   color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -980,6 +987,11 @@ body {
   height: 50px;
   border-radius: 10px;
   margin-top: 4px;
+  transition: transform 0.3s ease;
+}
+
+.experience-card-image:hover {
+  transform: scale(1.1);
 }
 
 @media only screen and (max-width: 768px) {
@@ -995,9 +1007,11 @@ body {
 }
 
 .experience-card-role {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
-  color: var(--text-primary+99);
+  /* color: #854CE6; */
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1007,9 +1021,10 @@ body {
 }
 
 .experience-card-company {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
-  color: var(--text-secondary+99);
+  color: var(--text-primary);
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1049,6 +1064,10 @@ body {
   display: flex;
   gap: 12px;
   margin-top: -10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
 }
 
 .experience-card-span {
@@ -1060,6 +1079,17 @@ body {
   font-size: 15px;
   font-weight: 400;
   color: var(--text-primary+99);
+  background: rgba(134, 76, 230, 0.1);
+  /* color: #854CE6; */
+  padding: 5px 14px;
+  border-radius: 15px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.experience-card-skill:hover {
+  background: rgba(134, 76, 230, 0.2);
+  transform: scale(1.05);
 }
 
 @media only screen and (max-width: 768px) {
@@ -1072,6 +1102,60 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+/* Enhanced Experience CSS */
+.vertical-timeline-element {
+  margin: 4em 0;
+}
+
+.vertical-timeline-element-content {
+  background: rgba(23, 23, 33, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(134, 76, 230, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(134, 76, 230, 0.1);
+  transition: all 0.3s ease;
+}
+
+.vertical-timeline-element-content:hover {
+  transform: translateY(-5px);
+  border-color: rgba(134, 76, 230, 0.5);
+  box-shadow: 0 8px 30px rgba(134, 76, 230, 0.2);
+}
+
+.vertical-timeline-element-icon {
+  background: #854CE6;
+  box-shadow: 0 0 0 4px #854CE6, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Contact CSS */

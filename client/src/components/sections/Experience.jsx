@@ -6,10 +6,27 @@ import ExperienceCard from "./Experiencecard";
 import CICE from '../../images/CICE.jpeg';
 import ucr from '../../images/uCR.jpg';
 import swoc from '../../images/swoc.jpeg';
+import Mittal from '../../images/mittal.jpg';
 
 const experiences = [
     {
         id: 0,
+        img: Mittal ,
+        role: "Frontend Developer",
+        company: "Mittal Alliance",
+        date: "Dec 2024 - Feb 2025",
+        desc: "Developed and optimized React.js-based user interfaces, implemented frontend animations, and enhanced design for better user experience. Focused on responsive UI components, clean code practices, and modern web development standards. Collaborated with the team to refine and improve application performance. ",
+        skills: [
+            "ReactJS",
+            "Tailwind CSS",
+            "Web Development",
+            "Designing",
+            "Team Collaboration",
+        ],
+        doc: "",
+    },
+    {
+        id: 1,
         img: CICE ,
         role: "Digital Head",
         company: "CICE Hub, JIIT",
@@ -25,7 +42,7 @@ const experiences = [
         doc: "",
     },
     {
-        id: 1,
+        id: 2,
         img: swoc,
         role: "Open-Source Contributer",
         company: "Social Winter of Code(SWOC)",
@@ -41,7 +58,7 @@ const experiences = [
         doc: "",
     },
     {
-        id: 2,
+        id: 3,
         img: ucr,
         role: "Digital Volunteer",
         company: "µCR Hub, JIIT",
@@ -60,21 +77,24 @@ const experiences = [
 
 
 const Experience = () => {
-
     return (
         <div className="experience-container" id="Experience">
             <div className="experience-wrapper">
-                <div className="experience-title">Experience</div>
-                <div className="experience-desc" style={{ marginBottom: "40px" }}>
+                <div className="experience-title animate-fade-in">Experience</div>
+                <div className="experience-desc animate-slide-up" style={{ marginBottom: "40px" }}>
                     My work experience as a software engineer and working on different
                     companies and projects.
                 </div>
 
-                <VerticalTimeline animate={true}>
+                <VerticalTimeline 
+                    animate={true}
+                    // lineColor={'#854CE6'}
+                >
                     {experiences.map((experience, index) => (
                         <ExperienceCard
                             key={`experience-${index}`}
                             experience={experience}
+                            index={index}
                         />
                     ))}
                 </VerticalTimeline>

@@ -53,7 +53,6 @@ const Skills = () => {
                 variants={container}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true }}
             >
                 {skil.map((skill, index) => (
                     <motion.div
