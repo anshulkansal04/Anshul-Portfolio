@@ -13,8 +13,11 @@ const StyledCanvasWrapper = styled.div`
 
 const Stars = (props) => {
   const ref = useRef();
+  const isMobile = window.innerWidth < 768;
   const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(5000), { radius: 1.2 })
+    random.inSphere(new Float32Array(isMobile ? 2000 : 4000), { 
+      radius: isMobile ? 0.6 : 1.2 
+    })
   );
 
   useFrame((state, delta) => {
@@ -28,7 +31,7 @@ const Stars = (props) => {
         <PointMaterial
           transparent
           color="#f272c8"
-          size={0.002}
+          size={isMobile ? 0.001 : 0.001}
           sizeAttenuation={true}
           depthWrite={false}
         />
